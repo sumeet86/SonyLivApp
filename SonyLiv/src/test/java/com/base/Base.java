@@ -24,7 +24,7 @@ public class Base {
 		cap.setCapability("fullReset", false);
 		cap.setCapability("appPackage", "com.sonyliv");
 		cap.setCapability("appActivity", "tv.accedo.via.android.app.splash.InitializationActivity");
-		AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+		AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 		return driver;
 
 	}
