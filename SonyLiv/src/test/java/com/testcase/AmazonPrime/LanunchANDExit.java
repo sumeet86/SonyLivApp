@@ -34,6 +34,12 @@ public class LanunchANDExit extends Base{
 		driver.findElement(By.xpath("//*[@text='Kids']")).click();
 		Thread.sleep(2000);
 		System.out.println("Moved To Kids section");
+		
+		driver.findElementByAndroidUIAutomator(
+				"new UiScrollable(new UiSelector().resourceId(\"com.amazon.avod.thirdpartyclient:id/LandingPageScrollView\")).scrollIntoView(new UiSelector().text(\"Movies and TV shows with animals\"));");
+		System.out.println("Movies and TV shows with animals found");
+		Thread.sleep(5000);
+		
 		driver.pressKeyCode(AndroidKeyCode.BACK);
 		System.out.println("App Exits");
 		
