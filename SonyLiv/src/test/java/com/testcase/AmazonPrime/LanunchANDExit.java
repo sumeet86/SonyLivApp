@@ -25,11 +25,30 @@ public class LanunchANDExit extends Base{
 		AndroidDriver<AndroidElement> driver=Capabilities(deviceName, platformVersion, model, appPackage, appActivity);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		System.out.println("App Launched");
+		
+		driver.findElementByAndroidUIAutomator(
+				"new UiScrollable(new UiSelector().resourceId(\"com.amazon.avod.thirdpartyclient:id/LandingPageScrollView\")).scrollIntoView(new UiSelector().text(\"Lifestyle\"));");
+		System.out.println("Lifestyle found");
+		Thread.sleep(5000);
+		
 		driver.findElement(By.xpath("//*[@text='TV Shows']")).click();
 		System.out.println("Moved to TV Shows Section");
 		Thread.sleep(2000);
+		
+		driver.findElementByAndroidUIAutomator(
+				"new UiScrollable(new UiSelector().resourceId(\"com.amazon.avod.thirdpartyclient:id/LandingPageScrollView\")).scrollIntoView(new UiSelector().text(\"Anime TV\"));");
+		System.out.println("Anime TV found");
+		Thread.sleep(5000);
+		
 		driver.findElement(By.xpath("//*[@text='Movies']")).click();
 		Thread.sleep(2000);
+		
+		driver.findElementByAndroidUIAutomator(
+				"new UiScrollable(new UiSelector().resourceId(\"com.amazon.avod.thirdpartyclient:id/LandingPageScrollView\")).scrollIntoView(new UiSelector().text(\"Movies in Gujarati \"));");
+		System.out.println(" Movies in Gujarati found");
+		Thread.sleep(5000);
+		
+		
 		System.out.println("Moved to Movies Section");
 		driver.findElement(By.xpath("//*[@text='Kids']")).click();
 		Thread.sleep(2000);
