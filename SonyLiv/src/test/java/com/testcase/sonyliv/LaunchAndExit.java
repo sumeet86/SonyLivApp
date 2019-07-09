@@ -1,4 +1,4 @@
-package com.testcase;
+package com.testcase.sonyliv;
 
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
@@ -22,6 +22,7 @@ public class LaunchAndExit extends Base{
 		driver.findElement(By.xpath("//*[@content-desc='Open navigation menu']")).click();
 		driver.pressKeyCode(AndroidKeyCode.BACK);
 		driver.pressKeyCode(AndroidKeyCode.BACK);
+		driver.pressKeyCode(AndroidKeyCode.HOME);
 		driver.findElement(By.xpath("//*[@text='Exit App']")).click();
 		System.out.println("App Exit to Home Screen");
 

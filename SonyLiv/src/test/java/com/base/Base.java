@@ -11,19 +11,25 @@ import io.appium.java_client.android.AndroidElement;
 
 public class Base {
 	
+	public static String deviceName= "Galaxy A50";
+	public static String platformVersion= "9";
+	public static String model ="RZ8M31M9CDE";
+	public static String appPackage= "com.sonyliv";
+	public static String appActivity ="tv.accedo.via.android.app.splash.InitializationActivity";
+	
 	
 	public static  AndroidDriver<AndroidElement> Capabilities() throws MalformedURLException {
 		
 		DesiredCapabilities cap= new DesiredCapabilities();
 		cap.setCapability(CapabilityType.BROWSER_NAME, "");
-		cap.setCapability("deviceName", "Galaxy A50");
-		cap.setCapability("platformVersion", "9");
-		cap.setCapability("model", "RZ8M31M9CDE");
+		cap.setCapability("deviceName",deviceName );
+		cap.setCapability("platformVersion", platformVersion);
+		cap.setCapability("model", model);
 		cap.setCapability("platformName", "Android");
 		cap.setCapability("noReset", true);
 		cap.setCapability("fullReset", false);
-		cap.setCapability("appPackage", "com.sonyliv");
-		cap.setCapability("appActivity", "tv.accedo.via.android.app.splash.InitializationActivity");
+		cap.setCapability("appPackage",appPackage);
+		cap.setCapability("appActivity", appActivity);
 		AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 		return driver;
 
