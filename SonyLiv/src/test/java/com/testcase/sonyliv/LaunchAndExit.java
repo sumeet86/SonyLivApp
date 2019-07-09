@@ -13,10 +13,15 @@ import io.appium.java_client.android.AndroidKeyCode;
 
 @SuppressWarnings("deprecation")
 public class LaunchAndExit extends Base{
+	public static String deviceName= "Galaxy A50";
+	public static String platformVersion= "9";
+	public static String model ="RZ8M31M9CDE";
+	public static String appPackage= "com.sonyliv";
+	public static String appActivity ="tv.accedo.via.android.app.splash.InitializationActivity"; 
 
 	public static void main(String[] args) throws MalformedURLException {
 		// TODO Auto-generated method stub
-		AndroidDriver<AndroidElement> driver=Capabilities();
+		AndroidDriver<AndroidElement> driver=Capabilities(deviceName, platformVersion, model, appPackage, appActivity);
 		System.out.println("App Launched");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//*[@content-desc='Open navigation menu']")).click();
@@ -27,5 +32,8 @@ public class LaunchAndExit extends Base{
 		System.out.println("App Exit to Home Screen");
 
 	}
+	
+			
+		
 
 }

@@ -15,10 +15,16 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
 public class ScrollCricketUpdate extends Base {
+	
+		public static String deviceName= "Galaxy A50";
+		public static String platformVersion= "9";
+		public static String model ="RZ8M31M9CDE";
+		public static String appPackage= "com.sonyliv";
+		public static String appActivity ="tv.accedo.via.android.app.splash.InitializationActivity"; 
 
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
 		// TODO Auto-generated method stub
-		AndroidDriver<AndroidElement> driver = Capabilities();
+		AndroidDriver<AndroidElement> driver = Capabilities(deviceName, platformVersion, model, appPackage, appActivity);
 		System.out.println("App Launched");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Thread.sleep(5000);
@@ -34,5 +40,7 @@ public class ScrollCricketUpdate extends Base {
 		System.out.println("Cricket Updates found");
 		
 	}
+
+
 
 }

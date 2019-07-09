@@ -11,14 +11,11 @@ import io.appium.java_client.android.AndroidElement;
 
 public class Base {
 	
-	public static String deviceName= "Galaxy A50";
-	public static String platformVersion= "9";
-	public static String model ="RZ8M31M9CDE";
-	public static String appPackage= "com.sonyliv";
-	public static String appActivity ="tv.accedo.via.android.app.splash.InitializationActivity";
 	
 	
-	public static  AndroidDriver<AndroidElement> Capabilities() throws MalformedURLException {
+	
+	
+	public static  AndroidDriver<AndroidElement> Capabilities(String deviceName,String platformVersion, String model, String appPackage,String appActivity) throws MalformedURLException {
 		
 		DesiredCapabilities cap= new DesiredCapabilities();
 		cap.setCapability(CapabilityType.BROWSER_NAME, "");
