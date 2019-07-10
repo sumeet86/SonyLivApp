@@ -26,7 +26,7 @@ public class LanunchANDExit extends Base{
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		System.out.println("App Launched");
 		
-		NavigationTopToBottom navi=new NavigationTopToBottom();
+		VerticalNavigation navi=new VerticalNavigation();
 		navi.HomeSection(driver);
 		navi.TVShows(driver);
 		navi.Movies(driver);

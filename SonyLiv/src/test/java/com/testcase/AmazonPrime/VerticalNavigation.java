@@ -7,7 +7,7 @@ import com.base.Base;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
-public class NavigationTopToBottom extends Base {
+public class VerticalNavigation extends Base {
 
 	public void HomeSection(AndroidDriver<AndroidElement> driver) throws InterruptedException {
 
